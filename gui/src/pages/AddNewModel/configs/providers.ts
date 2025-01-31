@@ -191,6 +191,34 @@ export const providers: Partial<Record<string, ProviderInfo>> = {
     ],
     apiKeyUrl: "https://console.scaleway.com/iam/api-keys",
   },
+  telkomai: {
+    title: "Telkom AI",
+    provider: "telkomai",
+    refPage: "telkomai",
+    description:
+      "Telkom AI Service offers industry-leading coding and language AI models that you can fine-tune to your specific needs for a variety of use cases.",
+    longDescription: `[Visit our APT UI](https://ui-stage-aitools.telkom.design) for information
+"Use gpt-4o, gpt-4o-mini, or any other listed model.`,
+    icon: "telkomai.png",
+    tags: [ModelProviderTags.RequiresApiKey],
+    packages: [
+      models.gpt4o,
+      models.gpt4omini,
+      models.Qwen2,
+    ],
+    collectInputFor: [
+      {
+        inputType: "text",
+        key: "apiKey",
+        label: "API Key",
+        placeholder: "Enter your TelkomAI API key",
+        required: true,
+      },
+      { ...apiBaseInput, required: true },
+      ...completionParamsInputsConfigs,
+    ],
+    apiKeyUrl: "https://api-stage-aitools.telkom.design/docs/#/AI%20Interaction/post_v1_gpt4_internal",
+  },
   azure: {
     title: "Azure OpenAI",
     provider: "azure",
