@@ -154,7 +154,7 @@ class OpenAI extends BaseLLM {
       finalOptions.messages = formatMessageForO1(finalOptions.messages);
     }
 
-    if (options.model === "o1") {
+    if (options.model === "o1" || this.providerName === "telkomai") {
       finalOptions.stream = false;
     }
 
@@ -249,7 +249,7 @@ class OpenAI extends BaseLLM {
       body.messages = formatMessageForO1(body.messages);
     }
 
-    if (body.model === "o1") {
+    if (body.model === "o1" || this.providerName === "telkomai") {
       // o1 doesn't support streaming
       body.stream = false;
     }

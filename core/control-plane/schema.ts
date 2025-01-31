@@ -6,6 +6,7 @@ const modelDescriptionSchema = z.object({
     "openai",
     "anthropic",
     "cohere",
+    "telkomai",
     "ollama",
     "huggingface-tgi",
     "huggingface-inference-api",

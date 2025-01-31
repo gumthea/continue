@@ -10,6 +10,7 @@ import { JinaApi } from "./apis/Jina.js";
 import { MoonshotApi } from "./apis/Moonshot.js";
 import { OpenAIApi } from "./apis/OpenAI.js";
 import { LLMConfig, OpenAIConfigSchema } from "./types.js";
+import { TelkomAI } from "./apis/TelkomAI.js";
 
 dotenv.config();
 
@@ -29,6 +30,8 @@ export function constructLlmApi(config: LLMConfig): BaseLlmApi | undefined {
       return new OpenAIApi(config);
     case "azure":
       return new AzureOpenAIApi(config);
+    case "telkomai":
+      return new OpenAIApi(config);
     case "cohere":
       return new CohereApi(config);
     case "anthropic":

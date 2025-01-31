@@ -55,6 +55,7 @@ export const modelDescriptionSchema = z.object({
     "sagemaker",
     "cloudflare",
     "azure",
+    "telkomai",
     "continue-proxy",
     "nebius",
     "scaleway",

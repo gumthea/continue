@@ -68,6 +68,7 @@ const PROVIDER_SUPPORTS_IMAGES: string[] = [
   "vertexai",
   "azure",
   "scaleway",
+  "telkomai",
 ];
 
 const MODEL_SUPPORTS_IMAGES: string[] = [

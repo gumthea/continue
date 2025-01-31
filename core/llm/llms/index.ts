@@ -46,6 +46,7 @@ import Scaleway from "./Scaleway";
 import SiliconFlow from "./SiliconFlow";
 import ContinueProxy from "./stubs/ContinueProxy";
 import TestLLM from "./Test";
+import TelkomAI from "./TelkomAI";
 import TextGenWebUI from "./TextGenWebUI";
 import Together from "./Together";
 import Novita from "./Novita";
@@ -56,6 +57,7 @@ import xAI from "./xAI";
 
 export const LLMClasses = [
   Anthropic,
+  TelkomAI,
   Cohere,
   FreeTrial,
   FunctionNetwork,
