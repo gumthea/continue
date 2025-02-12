@@ -49,6 +49,7 @@ const CHAT_ONLY_MODELS = [
   "gpt-4o-mini",
   "o1-preview",
   "o1-mini",
+  "qwen2.5-coder:7b",
 ];
 
 const formatMessageForO1 = (messages: ChatCompletionMessageParam[]) => {
@@ -154,7 +155,7 @@ class OpenAI extends BaseLLM {
       finalOptions.messages = formatMessageForO1(finalOptions.messages);
     }
 
-    if (options.model === "o1" || this.providerName === "telkomai") {
+    if (options.model === "o1") {
       finalOptions.stream = false;
     }
 
@@ -249,7 +250,7 @@ class OpenAI extends BaseLLM {
       body.messages = formatMessageForO1(body.messages);
     }
 
-    if (body.model === "o1" || this.providerName === "telkomai") {
+    if (body.model === "o1") {
       // o1 doesn't support streaming
       body.stream = false;
     }
