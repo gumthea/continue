@@ -41,6 +41,7 @@ class MessageTypes {
             "logoutOfControlPlane",
             "getTerminalContents",
             "showToast",
+            "openUrl"
         )
 
         // Note: If updating these values, make a corresponding update in
@@ -116,8 +117,11 @@ class MessageTypes {
             "addAutocompleteModel",
             "profiles/switch",
             "didChangeSelectedProfile",
+            "didChangeSelectedOrg",
             "tools/call",
-            "controlPlane/openUrl"
+            "controlPlane/openUrl",
+            "controlPlane/listOrganizations"
+
         )
     }
 }

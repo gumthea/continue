@@ -1,4 +1,4 @@
-import { ModelCapability, TemplateType } from "../index.js";
+import { ChatMessage, ModelCapability, TemplateType } from "../index.js";
 
 import {
   anthropicTemplateMessages,
@@ -258,7 +258,10 @@ function autodetectTemplateFunction(
   const templateType = explicitTemplate ?? autodetectTemplateType(model);
 
   if (templateType) {
-    const mapping: Record<TemplateType, any> = {
+    const mapping: Record<
+      TemplateType,
+      null | ((msg: ChatMessage[]) => string)
+    > = {
       llama2: llama2TemplateMessages,
       alpaca: templateAlpacaMessages,
       phi2: phi2TemplateMessages,
