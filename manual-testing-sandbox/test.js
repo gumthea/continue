@@ -6,11 +6,6 @@ class Calculator {
   add(number) {
     this.result += number;
     return this;
-    }
-
-  add(number) {
-    this.result += number;
-    return this;
   }
 
   subtract(number) {

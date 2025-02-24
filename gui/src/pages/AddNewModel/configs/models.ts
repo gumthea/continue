@@ -1377,7 +1377,7 @@ export const models: { [key: string]: ModelPackage } = {
     providerOptions: ["scaleway"],
     isOpenSource: true,
   },
-  Qwen2: {
+  TelkomQwen25Coder7b: {
     title: "Qwen 2.5 Coder 7b",
     description:
       "Qwen 2.5 is an auto-regressive language model that uses an optimized transformer architecture.",
@@ -1395,6 +1395,34 @@ export const models: { [key: string]: ModelPackage } = {
           "7b": {
             model: "qwen2.5-coder:7b",
             title: "Qwen 2.5 Coder 7b",
+          },
+        },
+      },
+    ],
+    providerOptions: ["telkomai"],
+    isOpenSource: true,
+  },
+  TelkomQwen25Coder14b: {
+    title: "Qwen 2.5 Coder 14b",
+    description:
+      "Qwen 2.5 is an auto-regressive language model that uses an optimized transformer architecture.",
+    params: {
+      title: "Qwen 2.5 Coder 14b",
+      model: "qwen2.5-coder:14b",
+      contextLength: 32_000,
+      completionOptions: {
+        topP: 0.5,
+      }
+    },
+    icon: "qwen.png",
+    dimensions: [
+      {
+        name: "Parameter Count",
+        description: "The number of parameters in the model",
+        options: {
+          "14b": {
+            model: "qwen2.5-coder:14b",
+            title: "Qwen 2.5 Coder 14b",
           },
         },
       },

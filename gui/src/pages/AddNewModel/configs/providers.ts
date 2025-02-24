@@ -204,7 +204,8 @@ export const providers: Partial<Record<string, ProviderInfo>> = {
     packages: [
       models.gpt4o,
       models.gpt4omini,
-      models.Qwen2,
+      models.TelkomQwen25Coder7b,
+      models.TelkomQwen25Coder14b,
     ],
     collectInputFor: [
       {

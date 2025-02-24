@@ -25,6 +25,13 @@ export const TelkomAI: ModelProvider = {
       maxCompletionTokens: 4096,
       contextLength: 128_000,
       recommendedFor: ["chat"],
+    },
+    {
+      model: "qwen2.5-coder:14b",
+      displayName: "Qwen 2.5 Coder 14b",
+      maxCompletionTokens: 4096,
+      contextLength: 128_000,
+      recommendedFor: ["chat"],
     }
   ],
 };
