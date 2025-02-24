@@ -50,6 +50,7 @@ const CHAT_ONLY_MODELS = [
   "o1-preview",
   "o1-mini",
   "qwen2.5-coder:7b",
+  "qwen2.5-coder:14b",
   "o3-mini",
 ];
 
