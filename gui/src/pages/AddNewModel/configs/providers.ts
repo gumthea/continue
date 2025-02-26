@@ -215,7 +215,6 @@ export const providers: Partial<Record<string, ProviderInfo>> = {
         placeholder: "Enter your TelkomAI API key",
         required: true,
       },
-      { ...apiBaseInput, required: true },
       ...completionParamsInputsConfigs,
     ],
     apiKeyUrl: "https://api-stage-aitools.telkom.design/docs/#/AI%20Interaction/post_v1_gpt4_internal",

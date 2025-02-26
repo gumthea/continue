@@ -9,6 +9,10 @@ class TelkomAI extends OpenAI {
     return false;
   }
 
+  public supportsCompletions(): boolean {
+    return false;
+  }
+
   protected useOpenAIAdapterFor: (LlmApiRequestType | "*")[] = [];
 
   static defaultOptions: Partial<LLMOptions> = {

@@ -1411,6 +1411,7 @@ export const models: { [key: string]: ModelPackage } = {
       model: "qwen2.5-coder:14b",
       contextLength: 32_000,
       completionOptions: {
+        maxTokens: 14900,
         topP: 0.5,
       }
     },

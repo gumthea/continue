@@ -30,8 +30,6 @@ export function constructLlmApi(config: LLMConfig): BaseLlmApi | undefined {
       return new OpenAIApi(config);
     case "azure":
       return new AzureOpenAIApi(config);
-    case "telkomai":
-      return new OpenAIApi(config);
     case "cohere":
       return new CohereApi(config);
     case "anthropic":
@@ -44,6 +42,8 @@ export function constructLlmApi(config: LLMConfig): BaseLlmApi | undefined {
       return new DeepSeekApi(config);
     case "moonshot":
       return new MoonshotApi(config);
+    case "telkomai":
+      return openAICompatible("https://api-stage-aitools.telkom.design/v1/openai", config);
     case "x-ai":
       return openAICompatible("https://api.x.ai/v1/", config);
     case "voyage":
